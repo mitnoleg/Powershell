@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+Get-ADComputer -filter * -Properties * | select SamAccountName, Name, OperatingSystem, OperatingSystemVersion, PasswordNeverExpires, LastLogonDate, Description, DistinguishedName | Export-Csv c:\mycomp.csv -NoType -UseCulture -Encoding UTF8

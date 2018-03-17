@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+Get-ADUser -filter * -Properties * | select SamAccountName, CannotChangePassword, PasswordNeverExpires, PasswordExpired, PasswordLastSet | Export-Csv c:\myusers.csv -NoType -UseCulture -Encoding UTF8
